@@ -28,8 +28,11 @@ def home_page():
 def convert():
     number = request.form["number"]
     roman = calendar.number_to_roman(number)
-    return render_template("convert.html", number=number, roman=roman)
+    haxa = calendar.integer_to_hexa(number)
+    binary = calendar.integer_to_binary(number)
+    return render_template("convert.html", number=number, roman=roman, hexa=haxa, binary=binary)
 
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+

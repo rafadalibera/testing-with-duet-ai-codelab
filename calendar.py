@@ -45,3 +45,30 @@ def number_to_roman(number):
         number -= 1
 
     return roman
+
+
+def integer_to_hexa(number):
+    """Converts a non-negative integer to its hexadecimal string representation."""
+    try:
+        num = int(number)
+    except (ValueError, TypeError):
+        raise TypeError("Input must be convertible to an integer.")
+
+    if num < 0:
+        raise ValueError("Input must be a non-negative integer.")
+
+    return hex(num)
+
+
+def integer_to_binary(number):
+    """Converts a non-negative integer to its binary string representation."""
+    try:
+        num = int(number)
+    except (ValueError, TypeError):
+        raise TypeError("Input must be convertible to an integer.")
+
+    if num < 0:
+        raise ValueError("Input must be a non-negative integer.")
+
+    return bin(num)
+
