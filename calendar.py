@@ -45,3 +45,7 @@ def number_to_roman(number):
         number -= 1
 
     return roman
+
+def number_to_binary(number):
+    """Converts an integer to its binary representation."""
+    return bin(int(number))

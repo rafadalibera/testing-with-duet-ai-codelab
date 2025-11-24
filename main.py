@@ -28,7 +28,8 @@ def home_page():
 def convert():
     number = request.form["number"]
     roman = calendar.number_to_roman(number)
-    return render_template("convert.html", number=number, roman=roman)
+    binary = calendar.number_to_binary(number)
+    return render_template("convert.html", number=number, roman=roman, binary=binary)
 
 
 if __name__ == "__main__":
